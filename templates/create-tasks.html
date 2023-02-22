@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Створити пост
+{% endblock %}
+
+{% block body %}
+<div class = "container mt-5">
+    <h1>Додавання завдання</h1>
+    <form method="post">
+        <input type="text" name = "nazva" id = "nazva" class = "form-control" placeholder="Назва"><br>
+        <textarea name = "task_text" id = "task_text" class = "form-control" placeholder="Текст завдання"></textarea><br>
+        <textarea name = "answer" id = "answer" class = "form-control" placeholder="відповідь"></textarea><br>
+        <input type="submit" class="btn btn-success" value = "Надіслати">
+    </form>
+
+</div>
+{% endblock %}

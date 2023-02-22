@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Усі завдання
+{% endblock %}
+
+{% block body %}
+<div class = "container mt-5">
+    <h1>Усі завдання</h1>
+    {% for el in tasks %}
+    <div class="alert alert-info">
+        <h2>{{ el.nazva }}</h2>
+        <p>{{ el.task_text }}</p>
+        <p><b>{{ el.date.date() }}</b></p>
+        <a href="/zadaniya/{{el.id}}" class="btn btn-warning">Детальніше</a>
+    </div>
+
+    {% endfor %}
+</div>
+{% endblock %}
